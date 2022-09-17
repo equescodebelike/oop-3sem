@@ -18,33 +18,37 @@ public interface ListExample<T> extends Iterator<T> {
 
     boolean isEmpty();
 
-    boolean contains(Object o);
+    // boolean contains(Object o);
 
-    boolean containsAll(Collection<?> c);
+    // boolean containsAll(Collection<?> c);
 
     boolean hasNext();
 
-    boolean hasPrevious();
+    // boolean hasPrevious();
 
-    T previous();
+    // T previous();
 
-    int nextIndex();
+    // int nextIndex();
 
-    int previousIndex();
+    // int previousIndex();
 
     T next();
 
-    ListExample<T> iterator();
+    // ListExample<T> iterator();
 
-    Object[] toArray();
+    // Object[] toArray();
 
-   // void forEachRemaining(Consumer<? super T> action);
+    // void forEachRemaining(Consumer<? super T> action);
 
     T get(int index);
+
+    void add(T e);
 
     int indexOf(Object o);
 
     int lastIndexOf(Object o);
 
-   // List<T> subList(int fromIndex, int toIndex);
+    // String toString();
+
+    // List<T> subList(int fromIndex, int toIndex);
 }
