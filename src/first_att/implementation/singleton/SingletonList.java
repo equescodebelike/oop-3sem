@@ -2,7 +2,6 @@ package first_att.implementation.singleton;
 
 import first_att.interfaces.ListExample;
 
-<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.List;
 
@@ -75,10 +74,4 @@ public class SingletonList<T> implements ListExample<T> {
     public int compareTo(T o) {
         return 0;
     }
-=======
-/**
- * Created by korobov_a_e on 10.09.2022.
- */
-public class SingletonList<T> { // implements ListExample<T> {
->>>>>>> 334f0fbfd67102b2d24cdbe6e780f8e9402eb8d7
 }
