@@ -1,4 +1,4 @@
-package first_att.implementation;
+package first_att.implementation.singleton;
 
 import first_att.interfaces.ListExample;
 

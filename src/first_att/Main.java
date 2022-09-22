@@ -1,14 +1,10 @@
 package first_att;
 
-import first_att.implementation.ReadOnlyListArr;
-import first_att.implementation.ReadOnlyListImp;
-
-import java.util.*;
-
 public class Main {
 
     public static void main(String[] args) {
-        String[] s1 = new String[]{"s", "sdf"};
+        //List examples
+        /*  String[] s1 = new String[]{"s", "sdf"};
         ReadOnlyListArr<String[]> list = new ReadOnlyListArr<>(s1);
         System.out.println(list.size());
         System.out.println(list.get(1));
@@ -17,6 +13,7 @@ public class Main {
         list2.add(4);
         ReadOnlyListImp<Integer> list3 = new ReadOnlyListImp<>(list2);
         Collections.sort(list3);
-        System.out.println(list3.size());
+        System.out.println(list3.size()); */
+        //Set examples
     }
 }

@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 /**
  * Created by korobov_a_e on 10.09.2022.
  */
-public interface ListExample<T> extends Iterator<T>, Comparable<T> {
+public interface ListExample<T> extends Iterator<T>, Comparable<T> { //Comparable or Comparator?
     // base commands
     // singleton one element
     // for all data sources
