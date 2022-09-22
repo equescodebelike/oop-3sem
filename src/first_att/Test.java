@@ -1,6 +1,8 @@
 package first_att;
 
-public class Main {
+import first_att.implementation.empty.EmptyList;
+
+public class Test {
 
     public static void main(String[] args) {
         //List examples
@@ -15,5 +17,6 @@ public class Main {
         Collections.sort(list3);
         System.out.println(list3.size()); */
         //Set examples
+        // EmptyList<String> list = new EmptyList<>();
     }
 }
