@@ -8,11 +8,13 @@ import java.util.function.Consumer;
 /**
  * Created by korobov_a_e on 10.09.2022.
  */
-public interface ListExample<T> extends Iterator<T> {
+public interface ListExample<T> extends Iterator<T>, Comparable<T> {
     // base commands
     // singleton one element
     // for all data sources
     // class implementation
+
+    //java.list implementation?
 
     int size();
 
@@ -43,6 +45,8 @@ public interface ListExample<T> extends Iterator<T> {
     T get(int index);
 
     void add(T e);
+
+    void remove(int index);
 
     int indexOf(Object o);
 
