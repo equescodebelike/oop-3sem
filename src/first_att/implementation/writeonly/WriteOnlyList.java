@@ -37,12 +37,7 @@ public class WriteOnlyList<T> implements ListExample<T> {
 
     @Override
     public T get(int index) {
-        try {
-            throw new Exception("You can't view elements in writeonly list");
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-        return null;
+        throw new RuntimeException("You can't get elements in write list");
     }
 
     @Override

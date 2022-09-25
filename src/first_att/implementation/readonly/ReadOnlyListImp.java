@@ -39,20 +39,12 @@ public class ReadOnlyListImp<T> implements ListExample<T> {
 
     @Override
     public void remove(int index) {
-        try {
-            throw new Exception("You can't remove elements in readonly list");
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
+       throw new RuntimeException("You can't remove elements in readonly list");
     }
 
     @Override
     public void add(Object e) {
-        try {
-            throw new Exception("You can't add elements in readonly list");
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
+        throw new RuntimeException("You can't add elements in readonly list");
     }
 
     @Override

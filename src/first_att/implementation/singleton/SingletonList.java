@@ -10,21 +10,20 @@ import java.util.List;
  */
 public class SingletonList<T> implements ListExample<T> {
 
-    private final List<T> original;
+    private T value;
 
-    public SingletonList(T o) {
-        original = new ArrayList<>();
-        original.add(o);
+    public SingletonList(T value) {
+        this.value = value;
     }
 
     @Override
     public int size() {
-        return original.size();
+        return 1;
     }
 
     @Override
     public boolean isEmpty() {
-        return original.size() != 0;
+        return false;
     }
 
     @Override
@@ -39,35 +38,35 @@ public class SingletonList<T> implements ListExample<T> {
 
     @Override
     public T get(int index) {
-        return original.get(index);
+        return value;
     }
 
     @Override
     public void add(T e) {
-        try {
-            throw new Exception("You can't add elements in single list");
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
+        throw new RuntimeException("You can't add elements in single list");
     }
 
     @Override
     public void remove(int index) {
-        try {
-            throw new Exception("You can't remove elements in single list");
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
+        throw new RuntimeException("You can't remove elements in single list");
     }
 
     @Override
     public int indexOf(Object o) {
-        return original.indexOf(o);
+        if (value == o) {
+            return 0;
+        } else {
+            return -1;
+        }
     }
 
     @Override
     public int lastIndexOf(Object o) {
-        return original.lastIndexOf(o);
+        if (value == o) {
+            return 0;
+        } else {
+            return -1;
+        }
     }
 
     @Override

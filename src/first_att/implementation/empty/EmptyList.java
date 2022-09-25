@@ -10,10 +10,7 @@ import java.util.List;
  */
 public class EmptyList<T> implements ListExample<T> {
 
-    // private final List<T> original;
-
     public EmptyList() {
-        List<T> list = new ArrayList<>();
     }
 
     @Override
@@ -23,7 +20,7 @@ public class EmptyList<T> implements ListExample<T> {
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return true;
     }
 
     @Override
@@ -43,16 +40,12 @@ public class EmptyList<T> implements ListExample<T> {
 
     @Override
     public void add(T e) {
-        try {
-            throw new Exception("You can't add elements in empty list");
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
+        throw new RuntimeException("You can't add elements in empty list");
     }
 
     @Override
     public void remove(int index) {
-
+        throw new RuntimeException("You can't remove elements in empty list");
     }
 
     @Override
@@ -69,5 +62,4 @@ public class EmptyList<T> implements ListExample<T> {
     public int compareTo(T o) {
         return 0;
     }
-
 }
