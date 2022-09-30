@@ -52,4 +52,9 @@ public class ReadOnlyMap<K, V> implements MapExample<K, V> {
     public void clear() {
         throw new RuntimeException("You can't remove elements in readonly map");
     }
+
+    @Override
+    public void sort() {
+        throw new RuntimeException("You can't sort elements in readonly map");
+    }
 }

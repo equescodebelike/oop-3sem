@@ -44,6 +44,11 @@ public class EmptyMap<K, V> implements MapExample<K, V> {
     }
 
     @Override
+    public void sort() {
+        throw new RuntimeException("You can't sort elements in empty map");
+    }
+
+    @Override
     public void put(Object key, Object value) {
         throw new RuntimeException("You can't add elements in empty map");
     }

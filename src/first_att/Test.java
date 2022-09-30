@@ -2,9 +2,12 @@ package first_att;
 
 import first_att.implementation.empty.EmptyList;
 import first_att.implementation.writeonly.WriteOnlyList;
+import first_att.implementation.writeonly.WriteOnlyMap;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Test {
 
@@ -22,5 +25,12 @@ public class Test {
         System.out.println(list3.size()); */
         //Set examples
         // EmptyList<String> list = new EmptyList<>();
+        Map<Integer, Integer> ma = new HashMap<>();
+        ma.put(1, 3);
+        ma.put(0, 2);
+        ma.put(100, 100);
+        ma.put(34, 34);
+        WriteOnlyMap<Integer, Integer> map = new WriteOnlyMap<>(ma);
+        map.sort();
     }
 }

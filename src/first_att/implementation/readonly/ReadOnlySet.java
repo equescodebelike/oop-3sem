@@ -2,6 +2,7 @@ package first_att.implementation.readonly;
 
 import first_att.interfaces.SetExample;
 
+import java.util.Comparator;
 import java.util.Set;
 
 /**
@@ -42,16 +43,17 @@ public class ReadOnlySet<T> implements SetExample<T> {
 
     @Override
     public void clear() {
-        throw new RuntimeException("You can't remove elements in readonly list");
+        throw new RuntimeException("You can't remove elements in readonly set");
     }
 
     @Override
-    public boolean hasNext() {
-        return false;
+    public Object[] toArray() {
+        return original.toArray();
     }
 
     @Override
-    public T next() {
-        return null;
+    public void sort(Comparator<? super T> c) {
+        throw new RuntimeException("You can't sort elements in readonly set");
     }
+
 }

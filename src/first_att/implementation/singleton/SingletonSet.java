@@ -2,6 +2,8 @@ package first_att.implementation.singleton;
 
 import first_att.interfaces.SetExample;
 
+import java.util.Comparator;
+
 /**
  * Created by korobov_a_e on 24.09.2022.
  */
@@ -44,12 +46,12 @@ public class SingletonSet<T> implements SetExample<T> {
     }
 
     @Override
-    public boolean hasNext() {
-        return false;
+    public Object[] toArray() {
+        return new Object[]{this.value};
     }
 
     @Override
-    public T next() {
-        return null;
+    public void sort(Comparator<? super T> c) {
+        throw new RuntimeException("You can't sort elements in single set");
     }
 }

@@ -3,10 +3,11 @@ package first_att.implementation.writeonly;
 import first_att.interfaces.MapExample;
 
 import java.util.Map;
+import java.util.TreeMap;
 
 public class WriteOnlyMap<K, V> implements MapExample<K, V> {
 
-    private final Map<K, V> original;
+    private Map<K, V> original;
 
     public WriteOnlyMap(Map<K, V> map) {
         original = map;
@@ -34,7 +35,7 @@ public class WriteOnlyMap<K, V> implements MapExample<K, V> {
 
     @Override
     public V get(Object key) {
-        throw new RuntimeException("You can't read elements in readonly map");
+        throw new RuntimeException("You can't read elements in writeonly map");
     }
 
     @Override
@@ -50,5 +51,10 @@ public class WriteOnlyMap<K, V> implements MapExample<K, V> {
     @Override
     public void clear() {
         original.clear();
+    }
+
+    @Override
+    public void sort() {
+        original = new TreeMap<>(original);
     }
 }

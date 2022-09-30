@@ -51,4 +51,9 @@ public class SingletonMap<K, V> implements MapExample<K, V> {
     public void clear() {
         throw new RuntimeException("You can't remove elements in single map");
     }
+
+    @Override
+    public void sort() {
+        throw new RuntimeException("You can't sort elements in single map");
+    }
 }

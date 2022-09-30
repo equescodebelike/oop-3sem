@@ -24,6 +24,8 @@ public interface MapExample<K, V> { // generics?
 
     void clear();
 
+    void sort();
+
     interface Entry<K, V> {
         K getKey();
 
