@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * Created by korobov_a_e on 10.09.2022.
  */
-public interface MapExample<K, V> extends Iterator<K> { // generics?
+public interface MapExample<K, V> { // generics?
 
     int size();
 
@@ -18,9 +18,9 @@ public interface MapExample<K, V> extends Iterator<K> { // generics?
 
     V get(Object key);
 
-    V put(K key, V value);
+    void put(K key, V value);
 
-    V remove(Object key);
+    void remove(Object key);
 
     void clear();
 
