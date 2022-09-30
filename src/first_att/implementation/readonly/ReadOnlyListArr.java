@@ -5,7 +5,7 @@ import first_att.interfaces.ListExample;
 /**
  * Created by korobov_a_e on 10.09.2022.
  */
-public class ReadOnlyListArr<T> implements ListExample<T> {
+/* public class ReadOnlyListArr<T> implements ListExample<T> {
 
     private int size = 0;
 
@@ -24,7 +24,7 @@ public class ReadOnlyListArr<T> implements ListExample<T> {
    /* private void ensureCapacity() {
         int newSize = elements.length * 2;
         elements = Arrays.copyOf(elements, newSize);
-    } */
+    }
 
     @Override
     public int size() {
@@ -86,4 +86,4 @@ public class ReadOnlyListArr<T> implements ListExample<T> {
     public int compareTo(T o) {
         return 0;
     }
-}
+} */

@@ -2,14 +2,14 @@ package first_att.implementation.writeonly;
 
 import first_att.interfaces.SetExample;
 
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by korobov_a_e on 24.09.2022.
  */
 public class WriteOnlySet<T> implements SetExample<T> {
 
-    private final Set<T> original;
+    private Set<T> original;
 
     public WriteOnlySet(Set<T> set) {
         original = set;
@@ -46,12 +46,14 @@ public class WriteOnlySet<T> implements SetExample<T> {
     }
 
     @Override
-    public boolean hasNext() {
-        return false;
+    public Object[] toArray() {
+        return original.toArray();
     }
 
     @Override
-    public T next() {
-        return null;
+    public void sort(Comparator<? super T> c) {
+        List<T> list = new ArrayList<>(original);
+        list.sort(c);
+        original = new HashSet<>(list); // ?
     }
 }

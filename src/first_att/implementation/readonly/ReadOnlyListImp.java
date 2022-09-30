@@ -2,7 +2,9 @@ package first_att.implementation.readonly;
 
 import first_att.interfaces.ListExample;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.ListIterator;
 
 public class ReadOnlyListImp<T> implements ListExample<T> {
 
@@ -23,23 +25,13 @@ public class ReadOnlyListImp<T> implements ListExample<T> {
     }
 
     @Override
-    public boolean hasNext() {
-        return false;
-    }
-
-    @Override
-    public T next() {
-        return null;
-    }
-
-    @Override
     public T get(int index) {
         return original.get(index);
     }
 
     @Override
     public void remove(int index) {
-       throw new RuntimeException("You can't remove elements in readonly list");
+        throw new RuntimeException("You can't remove elements in readonly list");
     }
 
     @Override
@@ -58,7 +50,13 @@ public class ReadOnlyListImp<T> implements ListExample<T> {
     }
 
     @Override
-    public int compareTo(T o) {
-        return 0;
+    public void sort(Comparator<? super T> c) {
+        throw new RuntimeException("You can't sort elements in readonly list");
     }
+
+    @Override
+    public Object[] toArray() {
+        return original.toArray();
+    }
+
 }

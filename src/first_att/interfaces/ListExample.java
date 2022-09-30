@@ -1,14 +1,12 @@
 package first_att.interfaces;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 import java.util.function.Consumer;
 
 /**
  * Created by korobov_a_e on 10.09.2022.
  */
-public interface ListExample<T> extends Iterator<T>, Comparable<T> { //Comparable or Comparator?
+public interface ListExample<T> { // extends Iterator<T>, Comparable<T> { //Comparable or Comparator?
     // base commands
     // singleton one element
     // for all data sources
@@ -24,7 +22,7 @@ public interface ListExample<T> extends Iterator<T>, Comparable<T> { //Comparabl
 
     // boolean containsAll(Collection<?> c);
 
-    boolean hasNext();
+    // boolean hasNext();
 
     // boolean hasPrevious();
 
@@ -34,13 +32,9 @@ public interface ListExample<T> extends Iterator<T>, Comparable<T> { //Comparabl
 
     // int previousIndex();
 
-    T next();
-
     // ListExample<T> iterator();
 
     // Object[] toArray();
-
-    // void forEachRemaining(Consumer<? super T> action);
 
     T get(int index);
 
@@ -55,4 +49,10 @@ public interface ListExample<T> extends Iterator<T>, Comparable<T> { //Comparabl
     // String toString();
 
     // List<T> subList(int fromIndex, int toIndex);
+
+    void sort(Comparator<? super T> c);
+
+    // ListIterator<T> listIterator();
+
+    Object[] toArray();
 }
